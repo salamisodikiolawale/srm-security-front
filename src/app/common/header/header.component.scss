@@ -1,7 +1,14 @@
-$primary-color: #4277D4;
-$secondary-color: #4277D4;
+$primary-color: #2E86C1 ;
+$secondary-color: #3498DB;
+$third-color: #5DADE2;
 
 /* Large */
+
+.global-nav {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+}
 
 .navigation {
   display: flex;
@@ -21,12 +28,52 @@ $secondary-color: #4277D4;
 }
 
 .navigation:hover {
-  background: $secondary-color;
+  background: $primary-color;
 }
 
 .navigation a:hover {
-  background: #1565C0;
+  background: $third-color;
 }
+
+.navigation-block-1 {
+
+  display: flex;
+  padding-bottom: 10px;
+
+  .login-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-content: flex-end;
+    width: 100%;
+    padding-right: 15px;
+
+    list-style: none;
+    margin: 0;
+
+
+    .login-btn, .logout-btn {
+      border-radius: 15px;
+      background-color: $secondary-color;
+      
+      a {
+        color: white;
+      }
+    }
+
+    .login-btn:hover, .logout-btn:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+
+.login-navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+}
+
 
 @media all and (max-width: 800px) {
   nav {
