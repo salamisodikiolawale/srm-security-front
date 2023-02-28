@@ -1,0 +1,14 @@
+### STAGE 1: Build ###
+FROM node:16.19.0 AS first-stage-builder
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+RUN cd dist
+
+### STAGE 2: Run ###
+FROM nginx:1.23.3-alpine
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=first-stage-builder /usr/src/app/dist/linking-education-security-front /usr/share/nginx/html
+
