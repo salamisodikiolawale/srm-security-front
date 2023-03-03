@@ -1,3 +1,11 @@
-$primary-color: #212D5E;
-$secondary-color: #4277D4;
-$fird-color: #181436;
+// Tout les composants doivent initialiser avec .container-custom
+.container-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+}

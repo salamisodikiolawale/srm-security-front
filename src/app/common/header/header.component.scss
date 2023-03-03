@@ -1,102 +1,74 @@
-$primary-color: #2E86C1 ;
-$secondary-color: #3498DB;
-$third-color: #5DADE2;
+.navbar-custom{
+  background-color: #3498DB;
+  margin-bottom: 50px;
+  // padding-top: 15px;
+  // padding-bottom: 15px;
+  padding-left: 200px;
+  padding-right: 200px;
 
-/* Large */
+  .nav-link, .active, .navbar-brand {
+      color: white;
+  }
 
-.global-nav {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-}
-
-.navigation {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-
-  list-style: none;
-  margin: 0;
-  background-color: $primary-color;
-}
-
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: white;
-}
-
-.navigation:hover {
-  background: $primary-color;
-}
-
-.navigation a:hover {
-  background: $third-color;
-}
-
-.navigation-block-1 {
-
-  display: flex;
-  padding-bottom: 10px;
-
-  .login-navigation {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: end;
-    align-content: flex-end;
-    width: 100%;
-    padding-right: 15px;
-
-    list-style: none;
-    margin: 0;
-
-
-    .login-btn, .logout-btn {
-      border-radius: 15px;
-      background-color: $secondary-color;
-      
-      a {
-        color: white;
+  .nav-link {
+      border-radius: 8px;
+  }
+  
+  .nav-link:hover {
+      background-color: #5DADE2;
+      border-radius: 8px;
+  }
+  .collapse{
+      .menu{
+          margin-left: 20px;
       }
-    }
 
-    .login-btn:hover, .logout-btn:hover {
-      background-color: $primary-color;
-    }
+      .search{
+
+        .btn-search-custom{
+            border: none;
+            color: white;
+            border: 1px solid #2E86C1;
+        }
+
+        .btn-search-custom:hover {
+            background-color: #5DADE2;
+        }
+      }
+  }
+  
+  .navbar-toggler-custom{
+      background-color: white;
+  }
+
+  .toggle-custom {
+      
+      .dropdown-menu-custom {
+          background-color: white;
+          padding: 0;
+          .dropdown-item-custom:hover {
+              background-color: #5DADE2;
+              border-radius: 5px;
+              color: white;
+          }
+      }
+  }
+
+  .btn-login, .btn-logout {
+      border-radius: 8px;
+      background-color: #5DADE2;
+      border: none;
+      color: white;
+      padding: 10px;
+      margin-left: 80px;
+  }
+
+  .btn-login:hover, .btn-logout:hover {
+      border-radius: 8px;
+      background-color: #2E86C1;
+      border: none;
+      color: white;
+      padding: 10px;
   }
 }
 
-
-.login-navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-}
-
-
-@media all and (max-width: 800px) {
-  nav {
-    background-color: white;
-  }
-  .navigation {
-    justify-content: space-around;
-    width: 100%;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .navigation a { 
-    text-align: center; 
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
-}
