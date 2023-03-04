@@ -11,7 +11,7 @@ import { Error404Component } from './common/error404/error404.component';
 import { LearningComponent } from './components/learning/learning.component';
 import { LearningCenterComponent } from './components/learning-center/learning-center.component';
 import { FindWorkComponent } from './components/find-work/find-work.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -29,6 +29,7 @@ import { FindWorkComponent } from './components/find-work/find-work.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
