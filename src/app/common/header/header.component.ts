@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  learnings:string[] = ['Sécurité', "Synotechnie", "Aéroportuaire", "Sécourisme", "Incendie"];
+  learningCenters:string[] = ['Luxant Group', "MACC1", "Export formation"];
+  
+  constructor(){}
 }
