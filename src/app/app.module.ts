@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { Error404Component } from './common/error404/error404.component';
 import { LearningComponent } from './components/learning/learning.component';
 import { LearningCenterComponent } from './components/learning-center/learning-center.component';
 import { FindWorkComponent } from './components/find-work/find-work.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './components/home/home.component';
+import { DisplaySubComponent } from './common/display-sub/display-sub.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     Error404Component,
     LearningComponent,
     LearningCenterComponent,
-    FindWorkComponent
+    FindWorkComponent,
+    HomeComponent,
+    DisplaySubComponent
   ],
   imports: [
     BrowserModule,
