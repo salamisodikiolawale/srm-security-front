@@ -4,48 +4,43 @@
         display: flex;
     }
     .intro-component{
-    
-            display: flex;
-            flex-direction: row;
-    
-            max-height: 700px;
-            padding-left: 215px;
-            padding-right: 215px;
-            
-            background-color: azure;  
-            
-            .intro-item-1 {
+        
+        display: flex;
+        flex-direction: row;
+        max-height: 700px;
+        padding-left: 215px;
+        padding-right: 215px;
+        height: 900px;
+        background-color: azure;  
+        
+        .intro-item-1 {
                 flex: 3;
                 display: flex;
                 flex-direction: column;
-    
+                justify-content: center;
+                align-items: center;
                 padding: 15px;
+                
                 .item-1 {
                     display: flex;
                     flex-direction: column;
-                    flex: 1;
                     justify-content: center;
                     align-items: center;
+                    padding-bottom: 100px;
                 }
-    
-                .item-2 {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: end;
-    
-                    .btn-discover-our-services {
-                        border-radius: 50px;
-                        background-color: #3498DB;
-                        border: none;
-                        color: white;
-                        padding: 15px;
-                        margin-left: 80px;
-                    }
-    
-                    .btn-discover-our-services:hover {
-                        background-color: #5DADE2;
-                    }
+
+                .btn-discover-our-services {
+                    border-radius: 8px;
+                    background-color: #3498DB;
+                    border: none;
+                    color: white;
+                    padding: 15px;
+                    width: 150px;
                 }
+                .btn-discover-our-services:hover {
+                    background-color: #5DADE2;
+                }
+                
             }
             .intro-item-2 {
                 flex: 1;
@@ -59,7 +54,7 @@
         height: 900px;
         padding-left: 215px;
         padding-right: 215px;
-        background-color: azure;
+        background-color: white;
 
         
         .content {
