@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="wd1000">
+
+        <form [formGroup]="offerResearchForm" class="search">
+          <!-- <i class="fa fa-search"></i> -->
+          <!-- <input type="text" class="form-control" placeholder="Have a question? Ask Now"> -->
+          <select formControlName="speciality" class="form-select form-selected-custom" aria-label="Default select example">
+            <!-- <option value="{{getSpecialities()[0].title}}" selected>{{getSpecialities()[0].title}}</option> -->
+            <option value="{{speciality.title}}" *ngFor="let speciality of getSpecialities();">{{speciality.title}}</option>
+          </select>
+
+          <select formControlName="contractType" class="form-select form-selected-custom ml15" aria-label="Default select example">
+            <!-- <option selected>Type de contrat</option> -->
+            <option value="{{contractType}}" *ngFor="let contractType of contractType;">{{contractType}}</option>
+          </select>
+
+          <select formControlName="workingHours" class="form-select form-selected-custom ml15" aria-label="Default select example">
+            <!-- <option selected>Temps</option> -->
+            <option value="{{workingHours}}" *ngFor="let workingHours of workingHours;">{{workingHours}}</option>
+          </select>
+
+          <button (click)="onSubmitForm()" class="btn btn-primary-custom b-shad-hover wd200 ml15">Search</button>
+        </form>
+        
+    </div>
+      
+    </div>
+</div>
