@@ -1,0 +1,25 @@
+<div class="job-offer-container justify-container">
+
+    <app-search-form (researchDateEvent)="offertReseachData($event)"></app-search-form>
+
+    <div class="job-offer-bloc">
+
+        <div class="job-offer-card-list">
+            <h2 class="col-12 text-center fs-4">Offres d’emploi basées sur votre activité</h2>
+            
+            <div class="list-group list-group-custom">
+              <div class="scrollspy-example">
+
+                <app-job-offert-card (jobOffertCurrentEvent)="onSendJobOffertData($event)" [jobffert]=jobffert *ngFor="let jobffert of jobOffers"></app-job-offert-card>
+              </div>
+              
+            </div>
+        </div>
+        
+        <div class="job-offer-selected-details">
+
+            <app-job-offert-details [jobOffer]=jobOfferSelected></app-job-offert-details>
+        </div>
+
+    </div>
+</div>

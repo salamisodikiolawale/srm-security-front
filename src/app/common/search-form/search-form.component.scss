@@ -1,0 +1,10 @@
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .btn-primary-custom{
+        background-color: #2E86C1;
+        color: white;
+    }
+}
