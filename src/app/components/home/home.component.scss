@@ -1,0 +1,67 @@
+.home-container {
+    //Premier composant de la page home
+    .img-security{
+        display: flex;
+    }
+    .intro-component{
+        
+        display: flex;
+        flex-direction: row;
+        max-height: 700px;
+        padding-left: 215px;
+        padding-right: 215px;
+        height: 900px;
+        background-color: azure;  
+        
+        .intro-item-1 {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                
+                .item-1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 100px;
+                }
+
+                .btn-discover-our-services {
+                    border-radius: 8px;
+                    background-color:#2E86C1;
+                    border: none;
+                    color: white;
+                    padding: 15px;
+                    width: 150px;
+                }
+                .btn-discover-our-services:hover {
+                    box-shadow: rgba(108, 164, 190, 0.17) 0px -23px 25px 0px inset, rgba(108, 164, 190, 0.17) 0px -36px 30px 0px inset, rgba(108, 164, 190, 0.17) 0px -79px 40px 0px inset, rgba(108, 164, 190, 0.17) 0px 2px 1px, rgba(108, 164, 190, 0.17) 0px 4px 2px, rgba(108, 164, 190, 0.17) 0px 8px 4px, rgba(108, 164, 190, 0.17) 0px 16px 8px, rgba(108, 164, 190, 0.17) 0px 32px 16px;
+                }
+                
+            }
+            .intro-item-2 {
+                flex: 1;
+            }
+    
+    }
+
+    .home-footer{
+        display: flex;
+        flex-direction: row;
+        height: 900px;
+        padding-left: 215px;
+        padding-right: 215px;
+        background-color: white;
+
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}

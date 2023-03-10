@@ -1,11 +1,55 @@
-// Tout les composants doivent initialiser avec .container-custom
-.container-custom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    margin-top: 70px;
-    padding-left: 200px;
-    padding-right: 200px;
+body {
+    font-family: Georgia, serif;
+}
+
+.justify-container {
+    padding-left: 215px;
+    padding-right: 215px;
+}
+
+/*Margin*/
+.m5{margin: 10px;}
+.m10{margin: 10px;}
+.m15{margin: 10px;}
+.m20{margin: 10px;}
+.m25{margin: 10px;}
+.m30{margin: 10px;}
+
+/*Margin-left*/
+.ml15{margin-left: 15px;}
+
+/*Padding*/
+.p5{margin: 5px;}
+.p10{margin: 10px;}
+.p15{margin: 15px;}
+.p20{margin: 20px;}
+.p25{margin: 25px;}
+.p30{margin: 30px;}
+
+/*Height*/
+.hg5{margin: 5px;}
+.hg10{margin: 10px;}
+.hg15{margin: 15px;}
+.hg20{margin: 20px;}
+.hg25{margin: 25px;}
+.hg30{margin: 30px;}
+
+/*Width*/
+.wd5{width: 5px;}
+.wd10{width: 10px;}
+.wd15{width: 15px;}
+.wd20{width: 20px;}
+.wd25{width: 25px;}
+.wd30{width: 30px;}
+.wd50{width: 50px;}
+.wd80{width: 80px;}
+.wd100{width: 100px;}
+.wd200{width: 200px;}
+.wd1000{width: 1000px;}
+.wdMax{width: 100%;}
+
+
+/*Shadow*/
+.b-shad-hover:hover {
+    box-shadow: rgba(108, 164, 190, 0.17) 0px -23px 25px 0px inset, rgba(108, 164, 190, 0.17) 0px -36px 30px 0px inset, rgba(108, 164, 190, 0.17) 0px -79px 40px 0px inset, rgba(108, 164, 190, 0.17) 0px 2px 1px, rgba(108, 164, 190, 0.17) 0px 4px 2px, rgba(108, 164, 190, 0.17) 0px 8px 4px, rgba(108, 164, 190, 0.17) 0px 16px 8px, rgba(108, 164, 190, 0.17) 0px 32px 16px;
 }
