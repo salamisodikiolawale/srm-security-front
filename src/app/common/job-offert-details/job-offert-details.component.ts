@@ -9,9 +9,16 @@ import { JobOffer } from 'src/app/interfaces/job-offer.interface';
 export class JobOffertDetailsComponent implements OnInit {
   
   @Input() jobOffer!:JobOffer;
-
+  
+  isInToFavorite!:boolean;
+  
+  
   constructor(){}
-
+  
   ngOnInit(): void {
+  }
+  
+  addToFavorite(arg0: JobOffer) {
+  throw new Error('Method not implemented.');
   }
 }

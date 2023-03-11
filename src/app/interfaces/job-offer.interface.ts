@@ -2,7 +2,7 @@ import { Speciality } from "./speciality.interface";
 
 export interface JobOffer {
 
-    id?: string;
+    id: number;
     title:string;
     salary: number;
     startingDate: string;

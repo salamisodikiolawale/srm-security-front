@@ -6,8 +6,24 @@
       <img src="{{jobOffer.learningCenterImage}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{jobOffer.title}}</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Nous recherchons un/une formateur ayant le sens du travail et l'amour de transmettre son savoir aux stagiaires.</p>
+
+        <span>Type de poste : {{jobOffer.contractType}} - {{jobOffer.workingHours}}</span><br/>
+        <span>Roulement : {{jobOffer.workingHours}}</span><br/>
+        <span>Salaire: {{jobOffer.salary}} €</span><br/>
+        <span>Avantages: {{jobOffer.benefits}}</span><br/>
+        <span>Profil requis: {{jobOffer.requireProfile}}</span><br/>
+        <span>Spécialité souhaitéé: {{jobOffer.specialities}}</span><br/>
+        <span>Date de prise de service: {{jobOffer.startingDate}}</span><br/>
+
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="col-12 text-end pe-3">
+          <span (click)="addToFavorite(jobOffer)">
+            <i *ngIf="!isInToFavorite" class="fa fa-heart fs-2 add-heart" aria-hidden="true"></i>
+            <!-- <i *ngIf="isInToFavorite" class="fa fa-heart fs-2 dont-add-heart" aria-hidden="true"></i> -->
+          </span>
+        </div>
       </div>
       <button class="btn">Postuler</button>
   </div>
