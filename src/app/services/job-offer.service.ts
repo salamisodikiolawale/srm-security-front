@@ -14,6 +14,7 @@ export class JobOfferService {
   getJobOffert():JobOffer[]{
     return [
       {
+        id:1,
         salary: 200,
         title: "Agent de sécurité H/F secteur cosmetique",
         startingDate: "12/02/2023",
@@ -26,6 +27,7 @@ export class JobOfferService {
         specialities: "Cynophile"
       },
       {
+        id:2,
         title: "Agent de sécurité H/F secteur du luxe",
         salary: 200,
         startingDate: "12/02/2023",
@@ -38,6 +40,7 @@ export class JobOfferService {
         specialities: "Surété"
       },
       {
+        id:3,
         title: "Agent de sécurité H/F secteur du luxe",
         salary: 200,
         startingDate: "12/02/2023",
@@ -50,6 +53,7 @@ export class JobOfferService {
         specialities: "Surété"
       },
       {
+        id:4,
         title: "Agent de sécurité H/F secteur du luxe",
         salary: 200,
         startingDate: "12/02/2023",
@@ -62,22 +66,24 @@ export class JobOfferService {
         specialities: "Aéroportuaire"
       },
       {
+        id:5,
         title: "Agent de sécurité H/F secteur du luxe",
         salary: 200,
         startingDate: "12/02/2023",
         contractType: "CDI",
         benefits: "Heure sup, Disponible le week-end",
-        workingHours: "Temps plein",
+        workingHours: "Temps partiel",
         requireProfile: "Nous recherchons un profil expérimenté",
         learningCenterName: "Secutitas",
         learningCenterImage: "https://www.luxantgroup.com/wp-content/uploads/2013/12/luxant-group-e1406624116529.jpg",
         specialities: "Aéroportuaire"
       },
       {
+        id:6,
         title: "Agent de sécurité H/F secteur du luxe",
         salary: 200,
         startingDate: "12/02/2023",
-        contractType: "CDI",
+        contractType: "CDD",
         benefits: "Heure sup, Disponible le week-end",
         workingHours: "Temps plein",
         requireProfile: "Nous recherchons un profil expérimenté",
