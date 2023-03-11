@@ -39,6 +39,7 @@ export class JobOfferComponent implements OnInit{
     this.filterJobOffers(offerReseachData);
   } 
 
+  //Amélioration possible: Ajout d'un input pour une recherche include
   filterJobOffers(researchData: ResearchFormData): void{
 
     //Pour récupérer la liste complète des offres
@@ -48,9 +49,9 @@ export class JobOfferComponent implements OnInit{
 
     this.jobOffers.forEach(jobOffer => {
 
-      if(jobOffer.contractType.toUpperCase() == researchData.contractType.toUpperCase() &&
-      jobOffer.specialities.toUpperCase() == researchData.speciality.toUpperCase() &&
-      jobOffer.workingHours.toUpperCase() == researchData.workingHours.toUpperCase() ) {
+      if((jobOffer.contractType.toUpperCase() === researchData.contractType.toUpperCase() &&
+      jobOffer.specialities.toUpperCase() === researchData.speciality.toUpperCase() &&
+      jobOffer.workingHours.toUpperCase() === researchData.workingHours.toUpperCase()) ) {
 
         this.jobOffers = [];
         jobOffersCurrent.push(jobOffer);

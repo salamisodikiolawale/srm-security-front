@@ -5,4 +5,21 @@
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
+
+    i{
+      cursor: pointer;   
+    }
+
+    i:hover{
+        cursor: pointer;  
+        font-size: 12px; 
+      }
+
+    .add-heart{
+        color: #d4e6f1;
+    }
+
+    .dont-add-heart{
+        color: #2675aa;
+    }
 }
