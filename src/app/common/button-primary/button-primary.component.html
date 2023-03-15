@@ -1,0 +1,12 @@
+<button 
+    class="text-nowrap" 
+    [ngStyle]="{
+    'border-radius': '8px',
+    'background-color': cardColor? cardColor:'#5DADE2',
+    'border': border? border:'none',
+    'color': color? color:'white',
+    'padding': padding? padding:'10px'
+    }" 
+    routerLink="/{{linkRouter}}">
+    {{title}}
+</button>

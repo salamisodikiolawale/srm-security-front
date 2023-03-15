@@ -1,25 +1,20 @@
-<div class="job-offer-container justify-container">
+<div class="container pt-10rem">
 
-    <app-search-form (researchDateEvent)="offertReseachData($event)"></app-search-form>
+  <app-search-form (researchDateEvent)="offertReseachData($event)"></app-search-form>
 
-    <div class="job-offer-bloc">
+  <div class="d-flex flex-sm-column-reverse flex-md-row  justify-content-center align-content-center pt-5rem">
 
-        <div class="job-offer-card-list">
-            <h2 class="col-12 text-center fs-4">Offres d’emploi basées sur votre activité</h2>
+      <div class="me-md-2">
+          <h2 class="col-12 text-center pt-sm-4 pt-md-0 fs-4">Offres d’emploi basées sur votre activité</h2>
+          
+          <div class="scrollspy-example vh-100">
+
+            <app-job-offert-card (jobOffertCurrentEvent)="onSendJobOffertData($event)" [jobffert]=jobffert *ngFor="let jobffert of jobOffers"></app-job-offert-card>
             
-            <div class="list-group list-group-custom">
-              <div class="scrollspy-example">
+          </div>
+      </div>
+      
+      <app-job-offert-details [jobOffer]=jobOfferSelected></app-job-offert-details>
 
-                <app-job-offert-card (jobOffertCurrentEvent)="onSendJobOffertData($event)" [jobffert]=jobffert *ngFor="let jobffert of jobOffers"></app-job-offert-card>
-              </div>
-              
-            </div>
-        </div>
-        
-        <div class="job-offer-selected-details">
-
-            <app-job-offert-details [jobOffer]=jobOfferSelected></app-job-offert-details>
-        </div>
-
-    </div>
+  </div>
 </div>

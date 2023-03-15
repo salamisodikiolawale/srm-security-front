@@ -5,16 +5,19 @@ import { JobOfferComponent } from './components/job-offer/job-offer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LearningCenterComponent } from './components/learning-center/learning-center.component';
 import { LearningComponent } from './components/learning/learning.component';
-import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
+import { SigninComponent } from 'src/auth/components/signin/signin.component';
+import { SignupComponent } from 'src/auth/components/signup/signup.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuard } from 'src/auth/gaurds/auth.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'logout', component: LogoutComponent},
+  { path: 'login', component: SigninComponent},
+  { path: 'register', component: SignupComponent},
 
   { path: 'formations', component: LearningComponent},
   { path: 'centres-de-formation', component: LearningCenterComponent},
   { path: 'trouver-un-emploi', component: JobOfferComponent},
+  { path: 'profile', canActivate: [AuthGuard],component: ProfileComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: Error404Component},
 ];

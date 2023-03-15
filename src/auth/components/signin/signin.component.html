@@ -1,0 +1,28 @@
+<div class="container d-md-flex justify-content-md-center align-content-center pt-10rem pb-10rem">
+    <div class="col-12 col-md-6 py-sm-100 py-md-200">
+        <div class="border p-5">
+
+            <h3> Connexion</h3>
+            <form [formGroup]="form">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Se souvenir</label>
+                </div>
+                <div class="col-12 d-flex align-content-center">
+
+                    <button class="btn btn-color-custom col-4" (click)="submitForm()">Se connecter</button>
+                    <a routerLink="/register" class="col-8 ps-3 mt-3 fw-lighter">Vous n'avez pas de compte ? Créer un compte !</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

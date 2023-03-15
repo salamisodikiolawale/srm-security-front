@@ -1,0 +1,8 @@
+<div class="container">
+    <div style="border: 1px solid red; margin-top: 200px;">
+
+        <div *ngIf="currentUser$ | async; let user;">
+            <div *ngIf="user">email: {{ user.email }}</div>
+        </div>
+    </div>
+</div>
