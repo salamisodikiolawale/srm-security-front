@@ -1,0 +1,40 @@
+<div class="container d-md-flex justify-content-md-center pt-10rem pb-10rem">
+    <div class="col-12 col-md-6 py-sm-100 py-md-200">
+        <div class="border p-5">
+
+            <h3> Créer un compte</h3>
+            <form [formGroup]="form">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nom</label>
+                  <input formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Prénom(s)</label>
+                  <input formControlName="lastName" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <input formControlName="trainer" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                      Je suis formateur
+                  </label>
+                </div>
+                
+                <div class="col-12 d-flex align-content-center">
+                    <button class="col-4" class="btn btn-color-custom" (click)="submitForm()">Créer mon compte</button>
+                    <a routerLink="/login" class="col-8 ps-3 mt-3 fw-lighter">Vous disposez d'un compte ? Connectez-vous !</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

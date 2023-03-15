@@ -1,9 +1,29 @@
-.job-offert-card{
-    padding: 10px;
+//Très petite | < 576 px | aucun | Petit Smartphone
+@media(max-width: 576px){
+    .mt-sm-5rem{ margin-top: 5rem; }
+}
+
+//Petite | ≥ 576 px | -sm | Smartphone
+@media(min-width: 576px){
     
-    .btn-custom{
-        background-color: #2E86C1;
-        color: white;
-        margin-top: 30px;
-    }
+}
+
+//Moyenne | ≥ 768 px | -md | Tablette
+@media(min-width: 768px){
+    .w-md-40rem{ width: 40rem;}
+}
+
+//Grande | ≥ 992 px | -lg | Grande tablette et PC 13’’
+@media(min-width: 992px){}
+
+//Très grand | ≥ 1200 px | -xl | Écran 15’’
+@media(min-width: 1200px){}
+
+//Très très grande | ≥ 1400 px | -md | Écran > 15’’
+@media(min-width: 1400px){}
+
+.btn-custom{
+    background-color: #2E86C1;
+    color: white;
+    margin-top: 30px;
 }

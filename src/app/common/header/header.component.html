@@ -1,51 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/">MyLinkingSecurityJob</a>
-      <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div></div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-color-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand color-white" routerLink="/" style="color:white;">MyLinkingSecurityJob</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="w-100">
+
+        <ul class="navbar-nav" style="color:white;">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/">Accueil</a>
+            <a class="nav-link" aria-current="page" style="color:white;" routerLink="/">Accueil</a>
           </li>
-          <li class="nav-item dropdown toggle-custom">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Formations
+          <li class="nav-item dropdown color-white btn-custom-hover-color">
+            <a class="nav-link dropdown-toggle color-white btn-custom-hover-color" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Formations
             </a>
-            <ul class="dropdown-menu dropdown-menu-custom">
-                <li><a class="dropdown-item dropdown-item-custom" href="#" *ngFor="let learning of learnings">{{learning}}</a></li>
-                <!-- <li><hr class="dropdown-divider"></li> -->
-                <!-- <li><a class="dropdown-item dropdown-item-custom" href="#">Another action</a></li> -->
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item dropdown-item-custom"  *ngFor="let learning of learnings">{{learning}}</a></li>
             </ul>
           </li>
-
-          <li class="nav-item dropdown toggle-custom">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown toggle-custom color-white btn-custom-hover-color">
+            <a class="nav-link dropdown-toggle color-white btn-custom-hover-color" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Centres de formation
             </a>
             <ul class="dropdown-menu dropdown-menu-custom">
-              <li><a class="dropdown-item dropdown-item-custom" href="#" *ngFor="let learningCenter of learningCenters">{{learningCenter}}</a></li>
+              <li><a class="dropdown-item dropdown-item-custom" *ngFor="let learningCenter of learningCenters">{{learningCenter}}</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/trouver-un-emploi">Touver un emploi</a>
+          <li class="nav-item color-white btn-custom-hover-color">
+            <a class="nav-link color-white btn-custom-hover-color" style="color:white;" routerLink="/trouver-un-emploi">Touver un emploi</a>
           </li>
-          
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li> -->
         </ul>
-
-        <form class="d-flex search" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-search-custom" type="submit">Rechercher</button>
-        </form>
-        
-        <button class="btn-login">Se connecter</button>
-        <!-- <button class="btn-logout">Se déconnecter</button> -->
       </div>
+      <span>
+
+        <span *ngIf="!jwtToken.isAuthenticated" class="d-flex flex-sm-column flex-md-row">
+          <button class="btn-login bg-color-secondary text-nowrap mb-sm-2 mb-md-0 me-md-4" routerLink="/login">Se connecter</button>
+          <button class="btn-register bg-color-secondary text-nowrap" routerLink="/register">S'inscrire</button>
+        </span>
+
+        <span *ngIf="jwtToken.isAuthenticated" class="d-flex">
+          <button class="btn-profile bg-color-secondary text-nowrap me-md-4" routerLink="/profile">Mon compte</button>
+          <button class="btn-logout bg-color-secondary text-nowrap" (click)="logout()">Se déconnecter</button>
+        </span>
+      </span>
     </div>
-  </nav>
+  </div>
+</nav>
