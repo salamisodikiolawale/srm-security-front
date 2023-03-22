@@ -15,14 +15,26 @@ export class AuthService {
     isAuthenticated: null,
     token:null
   });
-
+  
   constructor(private http: HttpClient ) { 
     this.initToken();
   }
-
-
+  
+  
   signup(userform: User): Observable<User>{
     return this.http.post<any>(`${environment.baseUrl}:${environment.apiPort}/api/auth/signup`, userform);
+  }
+  
+  signupCenter(centerForm: any) {
+    return this.http.post<any>(`${environment.baseUrl}:${environment.apiPort}/api/auth/center/signup`, centerForm);
+  }
+  
+  signupTrainee(traineeForm: any) {
+    return this.http.post<any>(`${environment.baseUrl}:${environment.apiPort}/api/auth/trainee/signup`, traineeForm);
+  }
+
+  signupTrainer(trainerForm: any) {
+    return this.http.post<any>(`${environment.baseUrl}:${environment.apiPort}/api/auth/trainer/signup`, trainerForm);
   }
 
   signin(credentials: { email: string, password: string}): Observable<string> {

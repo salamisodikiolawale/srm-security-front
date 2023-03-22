@@ -1,8 +1,9 @@
-export default interface User{
+export default interface Center{
     name:string;
-    lastName:string;
     email:string;
     password:string;
+    address:string;
+    createdDate:string;
     trainer:boolean;
     center:boolean;
     tranee:boolean;

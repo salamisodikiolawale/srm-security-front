@@ -14,7 +14,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'login', component: SigninComponent},
   { path: 'register', component: SignupComponent},
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
 
   { path: 'formations', component: LearningComponent},
   { path: 'centres-de-formation', component: LearningCenterComponent},
