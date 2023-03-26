@@ -1,28 +1,30 @@
 # LinkingEducationSecurityFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+# SRM
+Cette application SRM permet la mise en relation entre des formateurs qualifiés et de centre de formation: service proposant des cours à crédit.
 
-## Development server
+## Premiers pas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Fork le repository
 
-## Code scaffolding
+Clone le repository forké
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+ ## Installation
+ 
+ npm i
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Server Start
+npm start
 
-## Running unit tests
+# Contributing
+Veuillez consulter le [guide de contribution][1] pour obtenir des instructions détaillées sur la façon d'installer et de contribuer à notre projet.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Nous acceptons [différents types de contributions][2], y compris certaines qui ne nécessitent pas que vous écriviez une seule ligne de code.
 
-## Running end-to-end tests
+Si vous cherchez un moyen de contribuer, vous pouvez parcourir [nos problèmes existants][3] pour trouver quelque chose sur quoi travailler. Lorsque vous êtes prêt, consultez [Premiers pas avec la contribution][4] pour obtenir des instructions détaillées.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# linking-eduction-security-front
+
+
