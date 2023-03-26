@@ -28,3 +28,7 @@ Si vous cherchez un moyen de contribuer, vous pouvez parcourir [nos problèmes e
 
 
 
+[1]:https://github.com/salamisodikiolawale/linking-eduction-security-front/blob/main/CONTIBUTING.md
+[2]:https://github.com/salamisodikiolawale/linking-eduction-security-front/blob/main/Types-of-contributions.md
+[3]:https://github.com/salamisodikiolawale/linking-eduction-security-front/issues
+[4]:https://github.com/salamisodikiolawale/linking-eduction-security-front/blob/main/CODE_OF_CONDUCT.md
