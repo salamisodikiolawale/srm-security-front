@@ -19,6 +19,7 @@ import { JobOffertCardComponent } from './common/job-offert-card/job-offert-card
 import { SearchFormComponent } from './common/search-form/search-form.component';
 import { JobOffertDetailsComponent } from './common/job-offert-details/job-offert-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LearningCardComponent } from './common/learning-card/learning-card.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DisplaySubComponent,
     JobOffertCardComponent,
     SearchFormComponent,
-    JobOffertDetailsComponent
+    JobOffertDetailsComponent,
+    LearningCardComponent
   ],
   imports: [
     BrowserModule,

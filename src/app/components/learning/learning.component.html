@@ -1,1 +1,12 @@
-<p>learning works!</p>
+<div class="learning-container justify-container">
+    <div class="learning-bloc">
+
+        <div class="learning-card-list">
+            <h2 class="col-12 text-center fs-4">Offres de formation basées sur votre sélection</h2>
+            
+            <div class="list-group list-group-custom">                
+                <app-learning-card (learningCurrentEvent)="onSendLearningData($event)" [learning]=learning *ngFor="let learning of learning"></app-learning-card>              
+            </div>
+        </div>
+    </div>
+</div>

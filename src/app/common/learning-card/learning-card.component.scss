@@ -1,0 +1,16 @@
+.learning-card {
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-custom{
+        background-color: #2E86C1;
+        color: white;
+        margin-top: 30px;
+    }
+}
+
+.learning-card:hover {
+    scale: 1.05;
+}
