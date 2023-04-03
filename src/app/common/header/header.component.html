@@ -15,7 +15,7 @@
                 Formations
             </a>
             <ul class="dropdown-menu dropdown-menu-custom">
-                <li><a class="dropdown-item dropdown-item-custom" href="#" *ngFor="let learning of learnings" ng-click="">{{learning}}</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="#" *ngFor="let learning of learnings" (click)="navigateToFormation(learning, $event)">{{learning}}</a></li>
                 <!-- <li><hr class="dropdown-divider"></li> -->
                 <!-- <li><a class="dropdown-item dropdown-item-custom" href="#">Another action</a></li> -->
             </ul>

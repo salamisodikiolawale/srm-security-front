@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter} from '@angular/core';
 import { Learning } from 'src/app/interfaces/learning.interface';
 import { LearningService } from 'src/app/services/learning.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-learning',
@@ -13,14 +14,18 @@ export class LearningComponent implements OnInit {
 
   learningSelected!:Learning;
 
-  constructor(private LearningService: LearningService){}
+  constructor(private LearningService: LearningService, private route: ActivatedRoute){}
 
   ngOnInit() {
-    this.getLearning();
+    this.route.paramMap.subscribe(params => {
+      const formationName = params.get('formationName') || null;
+      this.getLearning(formationName);
+    })
   }
 
-  getLearning():Learning[]{
-    this.learning = this.LearningService.getLearning();
+  getLearning(formationName: string | null): Learning[]{
+    this.learning = this.LearningService.getLearningByName(formationName);
+    console.log('Formations récupéré :', this.learning);
 
     if(!this.learningSelected){
       this.learningSelected = this.learning[0];

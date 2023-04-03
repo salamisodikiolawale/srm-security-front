@@ -11,7 +11,15 @@ import { specialities } from '../utils/specialities';
 export class LearningService {
 
   constructor(private httpClient: HttpClient) { }
-  getLearning():Learning[]{
+
+  getLearningByName(formationName: string | null): Learning[] {
+    if(formationName == null) {
+      return this.getAllLearnings();
+    }
+    return this.getAllLearnings().filter((learning) => learning.specialities === formationName);
+  }
+
+  getAllLearnings():Learning[]{
     return [
       {
         id:1,
