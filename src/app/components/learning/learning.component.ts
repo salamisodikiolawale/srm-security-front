@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter} from '@angular/core';
 import { Learning } from 'src/app/interfaces/learning.interface';
 import { LearningService } from 'src/app/services/learning.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
   selector: 'app-learning',
@@ -17,13 +17,17 @@ export class LearningComponent implements OnInit {
   constructor(private LearningService: LearningService, private route: ActivatedRoute){}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const formationName = params.get('formationName') || null;
-      this.getLearning(formationName);
+    this.route.paramMap.subscribe((params : ParamMap) => {
+      if(params.has('formationName')) {
+        const formationName = params.get('formationName');
+        this.getLearnings(formationName);
+      } else {
+        this.getLearnings(null);
+      }
     })
   }
 
-  getLearning(formationName: string | null): Learning[]{
+  getLearnings(formationName: string | null): Learning[]{
     this.learning = this.LearningService.getLearningByName(formationName);
     console.log('Formations récupéré :', this.learning);
 
