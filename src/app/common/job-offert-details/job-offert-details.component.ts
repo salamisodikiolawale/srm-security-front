@@ -10,31 +10,27 @@ export class JobOffertDetailsComponent implements OnInit {
   
   @Input() jobOffer!:JobOffer;
   
-  isInToFavorite!:boolean;
+  favorite: number[] = [];
   
   constructor(){}
   
   ngOnInit() {
-    const favorisString = localStorage.getItem('favoris-app-linking-education-security');
-    const favoris = favorisString ? JSON.parse(favorisString) : [];
-    this.isInToFavorite = favoris.includes(this.jobOffer.id);
+    const favoriteString = localStorage.getItem('favoris-app-linking-education-security');
+    const favorite = favoriteString ? JSON.parse(favoriteString) : [];
   }
   
   addToFavorite(jobOffer: JobOffer) {
-    this.isInToFavorite = !this.isInToFavorite;
-    const favorisString = localStorage.getItem('favoris-app-linking-education-security');
-    const favoris = favorisString ? JSON.parse(favorisString) : [];
-  
-    if (this.isInToFavorite) {
-      favoris.push(jobOffer.id);
-    } else {
-      const index = favoris.indexOf(jobOffer.id);
-      if (index > -1) {
-        favoris.splice(index, 1);
-      }
-    }
-  
-    localStorage.setItem('favoris-app-linking-education-security', JSON.stringify(favoris));
+    this.favorite.push(jobOffer.id);
+    localStorage.setItem('favoris-app-linking-education-security', JSON.stringify(this.favorite));
   }
-  
+
+  deleteToFavorite(jobOffer: JobOffer) {
+    const index = this.favorite.indexOf(jobOffer.id);
+
+    if(index!== -1) {
+      this.favorite.splice(index, 1);
+      localStorage.setItem('favoris-app-linking-education-security', JSON.stringify(this.favorite));
+
+    }
+  }  
 }
