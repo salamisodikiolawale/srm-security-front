@@ -7,6 +7,9 @@
             <div class="list-group list-group-custom">                
                 <app-learning-card (learningCurrentEvent)="onSendLearningData($event)" [learning]=learning *ngFor="let learning of learning"></app-learning-card>              
             </div>
+            <div *ngIf="learning.length === 0" class="no-results text-center"> 
+                <p>Il n'y a pas d'offre correpondant à votre sélection</p>
+            </div>
         </div>
     </div>
 </div>
