@@ -5,7 +5,7 @@
   <div class="card">
       <img src="{{jobOffer.learningCenterImage}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{jobOffer.title}}</h5>
+        <h5 class="card-title" [id]="'job-' + jobOffer.id">{{jobOffer.title}}</h5>
         <p class="card-text">Nous recherchons un/une formateur ayant le sens du travail et l'amour de transmettre son savoir aux stagiaires.</p>
 
         <span>Type de poste : {{jobOffer.contractType}} - {{jobOffer.workingHours}}</span><br/>

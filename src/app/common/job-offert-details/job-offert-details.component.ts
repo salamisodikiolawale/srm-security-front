@@ -12,13 +12,29 @@ export class JobOffertDetailsComponent implements OnInit {
   
   isInToFavorite!:boolean;
   
-  
   constructor(){}
   
-  ngOnInit(): void {
+  ngOnInit() {
+    const favorisString = localStorage.getItem('favoris-app-linking-education-security');
+    const favoris = favorisString ? JSON.parse(favorisString) : [];
+    this.isInToFavorite = favoris.includes(this.jobOffer.id);
   }
   
-  addToFavorite(arg0: JobOffer) {
-  throw new Error('Method not implemented.');
+  addToFavorite(jobOffer: JobOffer) {
+    this.isInToFavorite = !this.isInToFavorite;
+    const favorisString = localStorage.getItem('favoris-app-linking-education-security');
+    const favoris = favorisString ? JSON.parse(favorisString) : [];
+  
+    if (this.isInToFavorite) {
+      favoris.push(jobOffer.id);
+    } else {
+      const index = favoris.indexOf(jobOffer.id);
+      if (index > -1) {
+        favoris.splice(index, 1);
+      }
+    }
+  
+    localStorage.setItem('favoris-app-linking-education-security', JSON.stringify(favoris));
   }
+  
 }
