@@ -1,67 +1,64 @@
-.home-container {
-    //Premier composant de la page home
-    .img-security{
-        display: flex;
-    }
-    .intro-component{
-        
-        display: flex;
-        flex-direction: row;
-        max-height: 700px;
-        padding-left: 215px;
-        padding-right: 215px;
-        height: 900px;
-        background-color: azure;  
-        
-        .intro-item-1 {
-                flex: 3;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 15px;
-                
-                .item-1 {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding-bottom: 100px;
-                }
-
-                .btn-discover-our-services {
-                    border-radius: 8px;
-                    background-color:#2E86C1;
-                    border: none;
-                    color: white;
-                    padding: 15px;
-                    width: 150px;
-                }
-                .btn-discover-our-services:hover {
-                    box-shadow: rgba(108, 164, 190, 0.17) 0px -23px 25px 0px inset, rgba(108, 164, 190, 0.17) 0px -36px 30px 0px inset, rgba(108, 164, 190, 0.17) 0px -79px 40px 0px inset, rgba(108, 164, 190, 0.17) 0px 2px 1px, rgba(108, 164, 190, 0.17) 0px 4px 2px, rgba(108, 164, 190, 0.17) 0px 8px 4px, rgba(108, 164, 190, 0.17) 0px 16px 8px, rgba(108, 164, 190, 0.17) 0px 32px 16px;
-                }
-                
-            }
-            .intro-item-2 {
-                flex: 1;
-            }
-    
+//Très petite | < 576 px | aucun | Petit Smartphone
+@media(max-width: 576px){
+    .py-sm-100{
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
-    .home-footer{
-        display: flex;
-        flex-direction: row;
-        height: 900px;
-        padding-left: 215px;
-        padding-right: 215px;
-        background-color: white;
-
-        
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
+    .mt-sm-60rem{ margin-top: 60rem; }
 }
+
+//Petite | ≥ 576 px | -sm | Smartphone
+@media(min-width: 576px){
+    
+    .mt-sm-60rem{ margin-top: 60rem; }
+
+    .mt-sm-50rem{ margin-top: 45rem; }
+    
+}
+
+//Moyenne | ≥ 768 px | -md | Tablette
+@media(min-width: 768px){
+    .py-md-200{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .pt-sm-200{ padding-top: 200px; }
+
+    .mt-md-20rem{ margin-top: 20rem; }
+}
+
+
+//Grande | ≥ 992 px | -lg | Grande tablette et PC 13’’
+@media(min-width: 992px){
+    
+    .pt-sm-200{ padding-top: 200px; }
+}
+
+//Très grand | ≥ 1200 px | -xl | Écran 15’’
+@media(min-width: 1200px){
+    .pt-sm-200{ padding-top: 200px; }
+}
+
+//Très très grande | ≥ 1400 px | -md | Écran > 15’’
+@media(min-width: 1400px){
+    .pt-sm-200{ padding-top: 200px; }
+}
+
+.btn-discover-our-services:hover {
+    box-shadow: rgba(108, 164, 190, 0.17) 0px -23px 25px 0px inset, rgba(108, 164, 190, 0.17) 0px -36px 30px 0px inset, rgba(108, 164, 190, 0.17) 0px -79px 40px 0px inset, rgba(108, 164, 190, 0.17) 0px 2px 1px, rgba(108, 164, 190, 0.17) 0px 4px 2px, rgba(108, 164, 190, 0.17) 0px 8px 4px, rgba(108, 164, 190, 0.17) 0px 16px 8px, rgba(108, 164, 190, 0.17) 0px 32px 16px;
+}
+.btn-discover-our-services {
+    border-radius: 8px;
+    background-color:#2E86C1;
+    border: none;
+    color: white;
+    padding: 15px;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+

@@ -1,18 +1,19 @@
- <div class="job-offert-card">
+<div class="p-sm-0 p-md-2">
 
-    <div class="card text-center">
-        <div class="card-header">
-          {{jobffert.learningCenterName}}
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{jobffert.title}}</h5>
-          <span>Type de poste : {{jobffert.contractType}} - {{jobffert.workingHours}}</span><br/>
-          <span>Roulement : {{jobffert.workingHours}}</span><br/>
-          <span>Salaire: {{jobffert.salary}} €</span><br/>
-        
-          <button (click)="sendJobOffertData(jobffert)" class="btn btn-custom">En savoir plus</button>
-        </div>
-        <div class="card-footer text-muted">
-          2 days ago
-        </div>
-      </div>
+  <div class="card text-center mb-sm-5 mb-md-0 w-md-40rem">
+     <div class="card-header">
+       {{jobffert.learningCenterName}}
+     </div>
+     <div class="card-body">
+       <h5 class="card-title">{{jobffert.title}}</h5>
+       <span>Type de poste : {{jobffert.contractType}} - {{jobffert.workingHours}}</span><br/>
+       <span>Roulement : {{jobffert.workingHours}}</span><br/>
+       <span>Salaire: {{jobffert.salary}} €</span><br/>
+     
+       <button (click)="sendJobOffertData(jobffert)" class="btn btn-custom">En savoir plus</button>
+     </div>
+     <div class="card-footer text-muted">
+       2 days ago
+     </div>
+  </div>
+</div>

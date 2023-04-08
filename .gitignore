@@ -30,3 +30,4 @@ e2e/*.map
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Angular
 .angular/
+.vscode

@@ -1,0 +1,153 @@
+<div class="container d-md-flex justify-content-md-center pt-10rem pb-10rem">
+
+    <div *ngIf="!isChoosedIndentity()">
+      <button class="btn" (click)="setIdentity('TRAINER')">Formateur</button>
+      <button class="btn" (click)="setIdentity('TRAINEE')">Stagiaire</button>
+      <button class="btn" (click)="setIdentity('CENTER')">Centre de formation</button>
+    </div>
+
+    <div *ngIf="isTrainer" class="col-12 col-md-6 py-sm-100 py-md-200">
+        <div class="border p-5">
+
+            <h3> Créer un compte Trainer</h3>
+            <form [formGroup]="form">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nom</label>
+                  <input formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Prénom(s)</label>
+                  <input formControlName="lastName" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputExperience1" class="form-label">Nombre d'année d'expérience professionnelle</label>
+                  <input formControlName="experience" type="number" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputAddress1" class="form-label">Addresse</label>
+                  <input formControlName="address" type="text" class="form-control" id="exampleInputAddress1" aria-describedby="addressHelp">
+                  <div id="addressHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <input formControlName="trainer" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label ms-1" for="flexCheckDefault">
+                      Formateur
+                  </label>
+                </div>
+                
+                <div class="col-12 d-flex align-content-center">
+                    <button class="col-4" class="btn btn-color-custom" (click)="submitTrainerForm()">Créer mon compte</button>
+                    <a routerLink="/login" class="col-8 ps-3 mt-3 fw-lighter">Vous disposez d'un compte ? Connectez-vous !</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulaire stagiaire -->
+    <div *ngIf="isTrainee" class="col-12 col-md-6 py-sm-100 py-md-200">
+      <div class="border p-5">
+
+          <h3> Créer un compte</h3>
+          <form [formGroup]="form">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nom</label>
+                <input formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Prénom(s)</label>
+                <input formControlName="lastName" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputAddress1" class="form-label">Addresse</label>
+                <input formControlName="address" type="text" class="form-control" id="exampleInputAddress1" aria-describedby="addressHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <input formControlName="trainee" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label ms-1" for="flexCheckDefault">
+                    Future stagiaire
+                </label>
+              </div>
+              <div class="col-12 d-flex align-content-center">
+                  <button class="col-4" class="btn btn-color-custom" (click)="submitTraineeForm()">Créer mon compte</button>
+                  <a routerLink="/login" class="col-8 ps-3 mt-3 fw-lighter">Vous disposez d'un compte ? Connectez-vous !</a>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <!-- Formulaire centre de formation -->
+
+  <div *ngIf="isCenter" class="col-12 col-md-6 py-sm-100 py-md-200">
+    <div class="border p-5">
+
+        <h3> Créer un compte</h3>
+        <form [formGroup]="form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nom</label>
+              <input formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAddress1" class="form-label">Addresse</label>
+              <input formControlName="address" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputWebsite1" class="form-label">Web site</label>
+              <input formControlName="website" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mb-3">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputCreateddate1">Date de création</label>
+              <input type="date" formControlName="createdDate" class="form-control" id="exampleFormControlTextarea1"/>
+            </div>
+            <div class="mb-3">
+              <input formControlName="center" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label ms-1" for="flexCheckDefault">
+                  Centre de formation
+              </label>
+            </div>
+            
+            <div class="col-12 d-flex align-content-center">
+                <button class="col-4" class="btn btn-color-custom" (click)="submitCenterForm()">Créer mon compte</button>
+                <a routerLink="/login" class="col-8 ps-3 mt-3 fw-lighter">Vous disposez d'un compte ? Connectez-vous !</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

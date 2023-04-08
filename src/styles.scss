@@ -2,54 +2,58 @@ body {
     font-family: Georgia, serif;
 }
 
-.justify-container {
-    padding-left: 215px;
-    padding-right: 215px;
+/*colors*/
+.color-primary { color: #3498DB; }
+.color-secondary { color: #2E86C1; }
+.color-tertiary { color: #2E86C1; }
+.color-azure{ color: azure; }
+.color-white { color: white; }
+
+
+/*colors:Hover*/
+.color-primary-hover:hover { color: #3498DB; }
+.color-secondary-hover:hover  { color: #2E86C1; }
+.color-tertiary-hover:hover  { color: #2E86C1; }
+.color-azure-hover:hover { color: azure; }
+.color-white-hover:hover  { color: white; }
+
+
+/*Background color*/
+.bg-color-primary { background-color: #3498DB; }
+.bg-color-secondary { background-color: #2E86C1; }
+.bg-color-tertiary { background-color: #2E86C1; }
+.bg-color-azure{ background-color: azure; }
+.bg-color-white { background-color: white; }
+
+
+/*Hover*/
+.bg-color-primary-hover:hover {
+    background-color: #2E86C1;
+    color: white;
 }
-
-/*Margin*/
-.m5{margin: 10px;}
-.m10{margin: 10px;}
-.m15{margin: 10px;}
-.m20{margin: 10px;}
-.m25{margin: 10px;}
-.m30{margin: 10px;}
-
-/*Margin-left*/
-.ml15{margin-left: 15px;}
-
-/*Padding*/
-.p5{margin: 5px;}
-.p10{margin: 10px;}
-.p15{margin: 15px;}
-.p20{margin: 20px;}
-.p25{margin: 25px;}
-.p30{margin: 30px;}
-
-/*Height*/
-.hg5{margin: 5px;}
-.hg10{margin: 10px;}
-.hg15{margin: 15px;}
-.hg20{margin: 20px;}
-.hg25{margin: 25px;}
-.hg30{margin: 30px;}
-
-/*Width*/
-.wd5{width: 5px;}
-.wd10{width: 10px;}
-.wd15{width: 15px;}
-.wd20{width: 20px;}
-.wd25{width: 25px;}
-.wd30{width: 30px;}
-.wd50{width: 50px;}
-.wd80{width: 80px;}
-.wd100{width: 100px;}
-.wd200{width: 200px;}
-.wd1000{width: 1000px;}
-.wdMax{width: 100%;}
-
 
 /*Shadow*/
 .b-shad-hover:hover {
     box-shadow: rgba(108, 164, 190, 0.17) 0px -23px 25px 0px inset, rgba(108, 164, 190, 0.17) 0px -36px 30px 0px inset, rgba(108, 164, 190, 0.17) 0px -79px 40px 0px inset, rgba(108, 164, 190, 0.17) 0px 2px 1px, rgba(108, 164, 190, 0.17) 0px 4px 2px, rgba(108, 164, 190, 0.17) 0px 8px 4px, rgba(108, 164, 190, 0.17) 0px 16px 8px, rgba(108, 164, 190, 0.17) 0px 32px 16px;
+}
+
+/*margin*/
+.mt-20rem { margin-top: 20rem; }
+.mt-10rem { margin-top: 10rem; }
+
+/*vh*/
+.vh-50 { height: 50vh; }
+.vh-75 { height: 75vh; }
+
+
+/*padding*/
+.pt-5rem{ padding-top: 5rem; }
+.pt-10rem{ padding-top: 10rem; }
+.pt-20rem{ padding-top: 20rem; }
+
+.pb-10rem{ padding-bottom: 10rem;}
+
+/*Width*/
+.w-40rem {
+    width: 40rem;
 }

@@ -1,0 +1,38 @@
+<div class="container-fluid pt-5rem">
+
+    <div class="d-flex flex-column">
+
+        <div class="d-flex flex-row">
+
+            <div class="border p-3 d-flex flex-column flex-grow-2">
+
+                <button class="btn bg-color-primary bg-color-primary-hover color-white mb-2"  (click)="showList()">Liste des offres publiées</button>
+                <button (click)="showCreateJobForm()" class="btn bg-color-primary bg-color-primary-hover color-white mb-2">Créer une offre d'emploi</button>
+                
+                <hr>
+                
+                <button type="button" class="btn bg-color-primary bg-color-primary-hover color-white mb-2 position-relative">
+                    Réception des candidatures
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+
+                <button type="button" class="btn bg-color-primary bg-color-primary-hover color-white mb-2 position-relative">
+                    Emails
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+            </div>  
+
+            <div class="p-3 flex-grow-1">
+                
+                <app-jobs-lists *ngIf="isShowList"></app-jobs-lists>
+                <app-job-form *ngIf="isShowForm"></app-job-form>
+            </div> 
+        </div>
+    </div>
+</div>

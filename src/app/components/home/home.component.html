@@ -1,44 +1,58 @@
-<div class="home-container">
+<div class="container-fluid">
 
-    <div>
-        
-        <app-display-sub></app-display-sub>
+    <div class="container vh-75 d-flex flex-column justify-content-center align-items-center mt-sm-50rem mt-md-0 pt-20rem">
 
-        <div class="intro-component">
-            <div class="intro-item-1">
-                <div class="item-1">
-                    <h1>Trouvez une formation <br /> et un emploi dans le <br /> secteur de la sécurité.</h1>
-                    <h6>
-                        My Security Job, leader dans les domaines de formation en sécurité vous <br /> propose un accompagnent gratuit et personnalisé vous permettant de devenir :
-                    </h6>
-                </div>
-                <div class="item-2">
-
-                    <button class="btn-discover-our-services">Découvrez nos services</button>
-                </div>
-            </div>
+        <div class="d-flex flex-column justify-content-center align-items-center text-justify">
+            <h1 class="fs-1">Comment ça marche ?</h1>
+            <h2 class="fs-2">La formations en sécurité pour trouver un emploi</h2>
+            <p class="fs-4">Vous souhaitez devenir agent de sécurité ou vous remettre à niveau afin de trouver un emploi d’agent rapidement ?</p>
+            <p class="fs-5"> My linking security Job vous accompagne simplement et gratuitement !</p>
+    
         </div>
-    
-        <div class="home-footer">
-            
-            <div class="content">
-                <div>
-                    <h1 class="title">POURQUOI VOUS NOUS ?</h1>
-                    <h4>La sécurité privée est un secteur qui recrute !</h4>
-                    <p class="description">
-    
-                        «  Le secteur de la Sécurité Privée est extrêmement dynamique, c’est un secteur qui recrute.
-    
-                        Cependant, nombre de candidats se sentent perdus dans leurs démarches et certains de leurs choix freinent leur accès à l’emploi.
-                        
-                        C’est dans une démarche innovante que j’ai créé my-security-job.com afin de mettre mes années d’expérience à votre service, pour vous guider pas à pas et accélérer votre réussite dans ce beau métier.
-                        
-                        Sur my-security-job.com, nous traitons des sujets autour de la surveillance humaine, de la sécurité incendie, de la sûreté aéroportuaire, de la cynotechnie, de la protection rapprochée, du secourisme et du management. »
-                    </p>
-    
-                </div>
-            </div>
+        
+        <div class="d-flex flex-sm-column flex-md-row">
+
+            <app-card 
+                [title]=data[0].title
+                [image]=data[0].image
+                [btnTitle]=data[0].btnTitle
+                [description]=data[0].description></app-card>
+            <app-card
+                [title]=data[2].title
+                [image]=data[2].image
+                [btnTitle]=data[2].btnTitle
+                [description]=data[2].description></app-card>      
+            <app-card
+                [title]=data[1].title
+                [image]=data[1].image
+                [btnTitle]=data[1].btnTitle
+                [description]=data[1].description></app-card>    
+              
         </div>
     </div>
 
+    <div class="vh-75 mt-sm-60rem mt-md-20rem d-flex justify-content-center align-items-center rounded-2 bg-color-azure">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="fs-1 text-nowrap">Trouvez une formation et un emploi dans le secteur de la sécurité.</p>
+                <p class="fs-5 text-nowrap">
+                    My Security Job, leader dans les domaines de formation en sécurité vous propose <br /> un accompagnent gratuit et personnalisé vous permettant de devenir :
+                </p>
+            </div>
+            <button class="btn-discover-our-services text-nowrap">Découvrez nos services</button>
+            
+        </div>
+    </div>
+
+    <div class="container vh-75 d-flex flex-column justify-content-center">
+
+        <h1 class="fs-1 text-nowrap">POURQUOI VOUS NOUS ?</h1>
+        <h4 class="fs-2 text-nowrap">La sécurité privée est un secteur qui recrute !</h4>
+        <p class="fs-5 text-wrap text-justify">
+            «  Le secteur de la Sécurité Privée est extrêmement dynamique, c’est un secteur qui recrute.
+            Cependant, nombre de candidats se sentent perdus dans leurs démarches et certains de leurs choix freinent leur accès à l’emploi.
+            C’est dans une démarche innovante que j’ai créé my-security-job.com afin de mettre mes années d’expérience à votre service, pour vous guider pas à pas et accélérer votre réussite dans ce beau métier.
+            Sur my-security-job.com, nous traitons des sujets autour de la surveillance humaine, de la sécurité incendie, de la sûreté aéroportuaire, de la cynotechnie, de la protection rapprochée, du secourisme et du management. »
+        </p>
+    </div>
 </div>
