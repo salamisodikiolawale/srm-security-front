@@ -3,6 +3,7 @@
 
         <div *ngIf="currentUser$ | async; let user;">
             <div *ngIf="user">email: {{ user.email }}</div>
+            <div *ngIf="user">email: {{ user.currentUserDatas?._id }}</div>
         </div>
     </div>
 </div>

@@ -30,11 +30,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   ], 
 
   providers:[
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    },
     AuthService,
     AuthFormService,
     UserService,

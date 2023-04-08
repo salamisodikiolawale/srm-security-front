@@ -1,0 +1,37 @@
+<div class="d-flex flex-sm-column-reverse flex-md-row" style="position: relative;">
+
+    <div style="width: 100%;">
+        <h2 class="col-12 text-center pt-sm-4 pt-md-0 fs-4">Liste des offres d'emploi publiées</h2>
+        
+        <div class="scrollspy-example vh-50 d-flex flex-row">
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Date de début</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let currentJob of jobsList; let i=index" (click)="showJobDetails(currentJob)" class="overTrCustom bg-color-primary-hover">
+                    <th scope="row">{{i}}</th>
+                    <td>{{currentJob.title}}</td>
+                    <td>{{currentJob.requireProfile}}</td>
+                    <td>{{currentJob.startingDate}}</td>
+                    <td>
+                      <span (click)="updateJob(currentJob)" class="p-2 m-1 rounded btn btn-info color-white color-white-hover"><fa-icon [icon]="getIcon().pen"></fa-icon></span>
+                      <span (click)="removeJob(currentJob)" class="p-2 rounded btn btn-danger color-white"><fa-icon [icon]="getIcon().remove"></fa-icon></span>
+                    </td>
+                  </tr>
+                </tbody>
+
+              </table>
+              <app-detail-job-card (closeEvent)="onClodedetailCard()" [job]="currentjob" *ngIf="isShowShowJobDetailCard"></app-detail-job-card>
+            
+        </div>
+    </div>
+</div>
+

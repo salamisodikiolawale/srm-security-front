@@ -113,7 +113,6 @@ export class SignupComponent {
   }
 
   submitTrainerForm():void{
-    console.log("TEST", this.form.value)
     this.authService.signupTrainer(this.form.value).subscribe({
 
       next:() => {
