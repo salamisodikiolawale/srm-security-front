@@ -24,6 +24,7 @@ export class UserService {
     return this.http.get<User>(`${environment.baseUrl}:${environment.apiPort}/api/user/current`).pipe(
 
       tap( (user: User) => {
+
         this.currentUser.next(user);
       }),
       switchMap( () => {

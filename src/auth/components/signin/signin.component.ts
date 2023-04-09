@@ -32,7 +32,7 @@ export class SigninComponent implements OnInit{
 
       next: () => {
 
-        this.route.navigate(['/dashboard']);
+        this.route.navigate(['/home']);
         this.toastrService.success('Authentification', "Succès");
       },
       error: (error:any) => {

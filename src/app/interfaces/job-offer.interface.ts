@@ -1,3 +1,5 @@
+import { Speciality } from "./speciality.interface";
+
 export interface JobOffer {
 
     id: number;
@@ -10,8 +12,7 @@ export interface JobOffer {
     requireProfile: string;
     learningCenterName: string;
     learningCenterImage: string;
-    specialities: string;
-    image?: string;
+    specialities: string
 
 }
 
