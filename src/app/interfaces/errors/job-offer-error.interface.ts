@@ -1,16 +1,13 @@
-export interface JobOffer {
+export interface JobOfferError {
 
-    id: number;
     title:string;
-    salary: number;
+    salary: string;
     startingDate: string;
     contractType: string;
     benefits: string;
     workingHours: string;
+    description: string;
     requireProfile: string;
-    learningCenterName: string;
-    learningCenterImage: string;
-    specialities: string;
     image?: string;
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {  faInbox} from '@fortawesome/free-solid-svg-icons';
+import {  faInbox, faPen, faRemove} from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFacebook, faInstagram, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -19,7 +19,9 @@ export class FaIconService {
       instagram: faInstagram,
       inbox: faInbox,
       google: faGoogle,
-      linkedin: faLinkedin
+      linkedin: faLinkedin,
+      pen: faPen,
+      remove: faRemove,
 
     };
   }

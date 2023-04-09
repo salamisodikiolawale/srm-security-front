@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { JobOffer } from 'src/app/interfaces/job-offer.interface';
 import ResearchFormData from 'src/app/interfaces/research-form.interface';
 import { JobOfferService } from 'src/app/services/job-offer.service';
