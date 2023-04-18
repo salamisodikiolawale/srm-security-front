@@ -1,0 +1,16 @@
+<div class="learning-card">
+    <div class="card text-center">
+        <div class="card-header">
+            <p>{{learning.title}}</p>
+            <img src={{learning.image}} alt="learning {{learning.title}}" >
+        </div>
+        <div class="card-body">
+            <span>Type : {{ learning.type }}</span>
+            <span>Attribute : {{ learning.attribute }}</span>
+            <span>Speciality : {{ learning.specialities }}</span>
+            <span>Module : {{ learning.module }}</span>
+            <span>Centre de formation : {{ learning.learningCenterName }}</span>
+            <button (click)="sendLearningData(learning)" class="btn btn-custom">En savoir plus</button>
+        </div>
+    </div>
+</div>

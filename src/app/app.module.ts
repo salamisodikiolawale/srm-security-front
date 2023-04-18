@@ -23,6 +23,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ButtonPrimaryComponent } from './common/button-primary/button-primary.component';
 import { CardComponent } from './common/card/card.component';
+import { LearningCardComponent } from './common/learning-card/learning-card.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CardComponent } from './common/card/card.component';
     JobOffertDetailsComponent,
     ProfileComponent,
     ButtonPrimaryComponent,
-    CardComponent
+    CardComponent,
+    LearningCardComponent
   ],
   imports: [
     BrowserModule,

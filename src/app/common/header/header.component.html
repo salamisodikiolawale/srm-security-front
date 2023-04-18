@@ -16,7 +16,7 @@
               Formations
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item dropdown-item-custom"  *ngFor="let learning of learnings">{{learning}}</a></li>
+              <li><a class="dropdown-item dropdown-item-custom" href="#" *ngFor="let learning of learnings" (click)="navigateToFormation(learning, $event)">{{learning}}</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown toggle-custom color-white btn-custom-hover-color">

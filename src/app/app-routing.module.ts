@@ -13,8 +13,7 @@ import { AuthGuard } from 'src/auth/gaurds/auth.guard';
 const routes: Routes = [
   { path: 'login', component: SigninComponent},
   { path: 'register', component: SignupComponent},
-
-  { path: 'formations', component: LearningComponent},
+  { path: 'formations/:formationName', component: LearningComponent},
   { path: 'centres-de-formation', component: LearningCenterComponent},
   { path: 'trouver-un-emploi', component: JobOfferComponent},
   { path: 'profile', canActivate: [AuthGuard],component: ProfileComponent},

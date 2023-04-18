@@ -3,6 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import JwtTokenStorage from 'src/auth/interfaces/jwt-token-storage.interface';
 import { AuthService } from 'src/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   btnLoginTitle:string = "test";
   
-  constructor(private authService: AuthService, private toastr: ToastrService){}
+  constructor(private authService: AuthService, private toastr: ToastrService, private router: Router){}
 
   ngOnInit(){
 
@@ -46,5 +47,8 @@ export class HeaderComponent implements OnInit, OnDestroy{
     }
   }
 
-
+  navigateToFormation(formationName: string, event: Event): void {
+    event.preventDefault();
+    this.router.navigate(['/formations', formationName]);
+  }
 }
