@@ -41,7 +41,7 @@ export class FavoriteService {
       this.jobOffersFavoriteList.push(jobOffer);
       localStorage.setItem('jobOffersFavoriteList', JSON.stringify(this.jobOffersFavoriteList));
     } else {
-      console.log("Il existe !");
+      // console.log("Il existe !");
       
     }
   }

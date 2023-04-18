@@ -1,6 +1,6 @@
 export interface JobOffer {
 
-    id: number;
+    _id: string;
     title:string;
     salary: number;
     startingDate: string;
@@ -11,7 +11,7 @@ export interface JobOffer {
     learningCenterName: string;
     learningCenterImage: string;
     specialities: string;
-    image?: string;
+    image: string;
 
 }
 

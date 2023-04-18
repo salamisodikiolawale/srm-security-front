@@ -4,7 +4,6 @@ import { Observable } from "rxjs";
 export class AuthInterceptor implements HttpInterceptor{
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log("PASS");
        
         const token = localStorage.getItem('linking-jwt');
         if( token ) {

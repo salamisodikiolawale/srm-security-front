@@ -20,22 +20,23 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputExperience1" class="form-label"><span>*</span>Type contrat</label>
-          <input formControlName="contractType" type="text" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">
+          <input formControlName="contractType" placeholder="CDI, CDD, Temporaire" type="text" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">
           <div id="emailHelp" class="form-text text-danger">{{errorOblect.contractType}}</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputAddress1" class="form-label"><span>*</span>description</label>
-          <input formControlName="description" type="text" class="form-control" id="exampleInputAddress1" aria-describedby="addressHelp">
+          <!-- <input formControlName="description" type="text" class="form-control" id="exampleInputAddress1" aria-describedby="addressHelp"> -->
+          <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           <div id="addressHelp" class="form-text text-danger">{{errorOblect.description}}</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"><span>*</span>Benefit</label>
+          <label for="exampleInputPassword1" class="form-label"><span>*</span>Avantages</label>
           <input formControlName="benefits" type="text" class="form-control" id="exampleInputPassword1">
           <div id="addressHelp" class="form-text text-danger">{{errorOblect.benefits}}</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"><span>*</span>Nombre heure de travail</label>
-            <input formControlName="workingHours" type="time" class="form-control" id="exampleInputPassword1">
+            <label for="exampleInputPassword1" class="form-label"><span>*</span>Emploi</label>
+            <input formControlName="workingHours" placeholder="Temps partiel, Temps plein" type="text" class="form-control" id="exampleInputPassword1">
             <div id="addressHelp" class="form-text text-danger">{{errorOblect.workingHours}}</div>
         </div>
         <div class="mb-3">
@@ -43,6 +44,11 @@
           <input formControlName="requireProfile" placeholder="Sénior, Junior, débutant" type="text" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">
           <div id="emailHelp" class="form-text text-danger">{{errorOblect.requireProfile}}</div>
         </div>
+        <!-- <div class="mb-3">
+          <label for="exampleInputExperience1" class="form-label"><span>*</span>Spécialité</label>
+          <input formControlName="speciality" placeholder="" type="text" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">
+          <div id="emailHelp" class="form-text text-danger">{{errorOblect.requireProfile}}</div>
+        </div> -->
         <div class="mb-3">
           <label for="exampleInputExperience1" class="form-label">Image de l'offre</label>
           <input formControlName="image" type="text" class="form-control" id="exampleInputExperience1" aria-describedby="experienceHelp">

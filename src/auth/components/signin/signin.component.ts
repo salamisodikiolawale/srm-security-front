@@ -26,7 +26,7 @@ export class SigninComponent implements OnInit{
       this.form = this.authFormService.buildSigninForm();
   }
 
-  submitForm():void{
+  submitForm():void {
     
     this.authService.signin(this.form.value).subscribe({
 

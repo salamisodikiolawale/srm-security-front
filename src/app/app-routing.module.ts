@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: SigninComponent},
   { path: 'register', component: SignupComponent},
   { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
+  { path: 'dashboard:isShowList', canActivate: [AuthGuard], component: DashboardComponent},
 
   { path: 'formations', component: LearningComponent},
   { path: 'centres-de-formation', component: LearningCenterComponent},

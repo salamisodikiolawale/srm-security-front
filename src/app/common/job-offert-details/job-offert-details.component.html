@@ -2,8 +2,8 @@
   
   <h2 class="col-12 text-center fs-4">Détails de l'offre</h2>
   
-  <div class="card">
-      <img src="{{jobOffer.learningCenterImage}}" class="card-img-top" alt="...">
+  <div class="card" *ngIf="jobOffer">
+      <img  src="{{jobOffer.image}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{jobOffer.title}}</h5>
         <p class="card-text">Nous recherchons un/une formateur ayant le sens du travail et l'amour de transmettre son savoir aux stagiaires.</p>
@@ -25,6 +25,6 @@
           </span>
         </div>
       </div>
-      <button class="btn">Postuler</button>
+      <button class="btn" (click)="applyToJob(jobOffer)">Postuler</button>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { environment } from '../../environment/environment';
 import User from '../interfaces/user.interface';
 import JwtTokenStorage from '../interfaces/jwt-token-storage.interface';
@@ -79,4 +79,5 @@ export class AuthService {
     });
     localStorage.removeItem('linking-jwt');
   }
+
 }

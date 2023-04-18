@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { JobOffer } from 'src/app/interfaces/job-offer.interface';
 import { FaIconService } from 'src/app/services/fa-icon.service';
 import { JobOfferService } from 'src/app/services/job-offer.service';
@@ -10,27 +12,35 @@ import { JobOfferService } from 'src/app/services/job-offer.service';
 })
 export class JobsListsComponent implements OnInit{
   
-  jobsList:JobOffer[] = [];
+  jobsList: JobOffer[] = [];
   
   currentjob!:JobOffer;
   
   isShowShowJobDetailCard:boolean = false;
   
-  constructor(private jobOffertService: JobOfferService, private faIconList: FaIconService){}
+  constructor(
+    private jobOffertService: JobOfferService, 
+    private faIconList: FaIconService,
+    private router:Router,
+    private toastr: ToastrService
+    ){}
   
   
   ngOnInit(): void {
     
-    this.getJobsList();
+    this.getJobsByCenter();
   }
   
   close() {
     throw new Error('Method not implemented.');
   }
 
-  getJobsList(): void {
+  getJobsByCenter(): void {
 
-    this.jobsList = this.jobOffertService.getJobOffert();
+    this.jobOffertService.getJobByCenter().subscribe( jobs => {
+
+      this.jobsList  = jobs;
+    });
   }
 
   showJobDetails(job: JobOffer):void {
@@ -50,13 +60,17 @@ export class JobsListsComponent implements OnInit{
 
   updateJob(currentJob: JobOffer) {
 
-    console.log('CREATE JOB', currentJob);
+    this.jobOffertService.updateJob(currentJob);
     
   }
 
   removeJob(currentJob: JobOffer) {
 
-    console.log('CREATE JOB', currentJob);
+    this.jobOffertService.removeJob(currentJob._id).subscribe( v => {
+
+      this.toastr.success(`Succès`, 'Supprimé');
+      this.router.navigate(['dashbord']);
+    });
     
   }
 }
